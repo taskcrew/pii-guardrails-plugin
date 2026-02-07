@@ -1,0 +1,11 @@
+{
+  "name": "guardrails-pii",
+  "version": "0.1.0",
+  "description": "Detects and redacts PII from MCP tool calls using Claude Haiku",
+  "author": {
+    "name": "Marek Paris"
+  },
+  "repository": "https://github.com/taskcrew/pii-guardrails-plugin",
+  "license": "MIT",
+  "keywords": ["pii", "redaction", "privacy", "guardrails", "mcp", "security"]
+}

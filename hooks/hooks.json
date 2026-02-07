@@ -1,0 +1,29 @@
+{
+  "description": "PII detection and redaction hooks for MCP tool calls",
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "mcp__.*",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 $CLAUDE_PLUGIN_ROOT/hooks/scripts/pii-redact.py --hook pre",
+            "timeout": 30
+          }
+        ]
+      }
+    ],
+    "PostToolUse": [
+      {
+        "matcher": "mcp__.*",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 $CLAUDE_PLUGIN_ROOT/hooks/scripts/pii-redact.py --hook post",
+            "timeout": 30
+          }
+        ]
+      }
+    ]
+  }
+}
